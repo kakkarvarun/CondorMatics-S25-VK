@@ -20,9 +20,9 @@ resource "aws_vpc" "app" {
 
 # INSTANCES
 resource "aws_instance" "nginx1" {
-  ami                    = nonsensitive(data.aws_ssm_parameter.amzn2_linux.value)
-  instance_type          = "t3.micro"
-  
+  ami           = nonsensitive(data.aws_ssm_parameter.amzn2_linux.value)
+  instance_type = "t3.micro"
+
   user_data = <<EOF
 #! /bin/bash
 sudo amazon-linux-extras install -y nginx1
