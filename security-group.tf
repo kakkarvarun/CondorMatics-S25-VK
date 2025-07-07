@@ -20,7 +20,7 @@ resource "aws_security_group" "public_security_group" {
 }
 
 resource "aws_security_group" "load_balancer_security_group" {
-  name = "load-balancer-security-group"
+  name   = "load-balancer-security-group"
   vpc_id = aws_vpc.app.id
 
   ingress {
@@ -38,7 +38,8 @@ resource "aws_security_group" "load_balancer_security_group" {
   }
   tags = {
     Name = "lb-security-group"
-}
+  }
 
 
 }
+

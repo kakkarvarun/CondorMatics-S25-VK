@@ -25,11 +25,11 @@ aws s3 cp s3://${aws_s3_bucket.web_bucket.id}/webcontent/programs.jpg /home/ec2-
 sleep 2  # Extra delay after large files
 
 # Configure Nginx with verification steps
-sudo rm /usr/share/nginx/html/index.html
+# sudo rm /usr/share/nginx/html/index.html
 sleep 0.5  # Allow filesystem operations to complete
 
 # Create temporary index.html
-echo '<html><head><title>Taco Team Server</title></head><body style=\"background-color:#1F778D\"><p style=\"text-align: center;\"><span style=\"color:#FFFFFF;\"><span style=\"font-size:28px;\">You did it! Have a &#127790;</span></span></p></body></html>' | sudo tee /usr/share/nginx/html/index.html
+#echo '<html><head><title>Taco Team Server</title></head><body style=\"background-color:#1F778D\"><p style=\"text-align: center;\"><span style=\"color:#FFFFFF;\"><span style=\"font-size:28px;\">You did it! Have a &#127790;</span></span></p></body></html>' | sudo tee /usr/share/nginx/html/index.html
 sleep 0.5
 
 # Copy all files with delays between operations
