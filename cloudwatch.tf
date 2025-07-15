@@ -10,7 +10,7 @@ resource "aws_cloudwatch_dashboard" "condormatics-dashboard" {
         height = 6
 
         properties = {
-          metric = [
+          metrics = [
             "AWS/EC2",
             "CPUUtilization",
             "InstanceId",
@@ -28,7 +28,7 @@ resource "aws_cloudwatch_dashboard" "condormatics-dashboard" {
 
 resource "aws_cloudwatch_metric_alarm" "ec2-nginx1-cpu-alarm" {
   alarm_name                = "condormatics-ec2-nginx1-cpu-alarm"
-  comparison_operator       = "GreaterThanOrEqualToTreshold"
+  comparison_operator       = "GreaterThanOrEqualToThreshold"
   evaluation_periods        = 2
   metric_name               = "CPUUtilization"
   namespace                 = "AWS/EC2"
