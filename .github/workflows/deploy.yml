@@ -20,7 +20,7 @@ jobs:
         -   name:   Checkout Repository
             uses:   actions/checkout@v2
   
-        -   name: Setting up the databae
+        -   name: Setting up the terraform
             uses: hashicorp/setup-terrform@v1
             with:
               terrform_version: 1.12.0
